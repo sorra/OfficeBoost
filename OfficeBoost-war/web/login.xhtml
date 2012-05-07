@@ -11,15 +11,15 @@
 	    <table>
 		<tr>
 		    <td>Username: </td>
-		    <td><h:inputText value="#{username}"></h:inputText></td>
+		    <td><h:inputText value="#{login_backing.username}"></h:inputText></td>
 		</tr>
 		<tr>
 		    <td>Password: </td>
-		    <td><h:inputSecret value="#{password}"></h:inputSecret></td>
+		    <td><h:inputSecret value="#{login_backing.password}"></h:inputSecret></td>
 		</tr>
 	    </table>
 	    <p><h:messages /></p>
-	    <p><h:commandButton value="login" action="#{userBean.login(username, password)}"></h:commandButton></p>
+	    <p><h:commandButton value="login" action="#{login_backing.login}"></h:commandButton></p>
 	</h:form>
     </h:body>
 </html>
