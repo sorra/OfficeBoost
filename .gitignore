@@ -4,3 +4,11 @@
 *.jar
 *.war
 *.ear
+/nbproject/private/
+/OfficeBoost-war/nbproject/private/
+/OfficeBoost-ejb/nbproject/private/
+/OfficeBoost-ejb/build/
+/OfficeBoost-ejb/dist/
+/OfficeBoost-war/build/
+/build/
+/OfficeBoost-war/dist/

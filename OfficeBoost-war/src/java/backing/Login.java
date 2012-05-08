@@ -4,11 +4,11 @@
  */
 package backing;
 
-import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
+import javax.inject.Named;
 
 /**
  *
@@ -27,16 +27,18 @@ public class Login {
     
     public String login() {
 	FacesMessage outMessage = null;
-	String outcome = null;
+	
 	if (username.equals(uString) && password.equals(pString)) {
-	    outMessage = new FacesMessage("Login success! ");
-	    outcome = "success";
+	    
+	     return "main";
 	} else {
+           
 	    outMessage = new FacesMessage("Login failed! ");
-	    outcome = "login";
+	    
+            FacesContext.getCurrentInstance().addMessage(null, outMessage);
+	return "login";
 	}
-	FacesContext.getCurrentInstance().addMessage(null, outMessage);
-	return outcome;
+	
     }
 
     /**
