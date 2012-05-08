@@ -19,7 +19,7 @@
                         <div class="bd">
                         <div class="top-nav-info">
                             
-                            <font size="3" color="blue">欢迎您：<h:outputText value="#{login_backing.username}  " rendered="true"/></font>
+                            <font size="3" color="blue">欢迎您：<h:outputText value="#{userSession.username}  " rendered="true"/></font>
                             
                             <a href="login.xhtml"><font color="red">退出</font></a>
                         </div>
@@ -52,7 +52,7 @@
                                     <tbody>
                                         <tr>
                                             <td>申请人：</td>
-                                            <td><input type="text" name="applicant" value="#{login_backing.username}" readonly="readonly" disabled="true"/></td>
+                                            <td><input type="text" name="applicant" value="#{userSession.username}" readonly="readonly" disabled="true"/></td>
                                         </tr>
                                         <tr>
                                              <td>陪同人员：</td>

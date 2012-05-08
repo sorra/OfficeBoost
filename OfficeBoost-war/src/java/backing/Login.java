@@ -8,6 +8,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
@@ -17,28 +18,29 @@ import javax.inject.Named;
 @Named(value = "login_backing")
 @RequestScoped
 public class Login {
-    @ManagedProperty(value="")
+
+    @ManagedProperty(value = "")
     private String username;
-    @ManagedProperty(value="")
+    @ManagedProperty(value = "")
     private String password;
-    
+    @Inject @Named(value="userSession")
+    UserSession userSession;
     private final String uString = "abc";
     private final String pString = "123";
-    
+
     public String login() {
 	FacesMessage outMessage = null;
-	
+
 	if (username.equals(uString) && password.equals(pString)) {
-	    
-	     return "main";
+//	    outMessage = new FacesMessage("Login success! ");
+	    userSession.setUsername(username);
+	    return "main";
 	} else {
-           
 	    outMessage = new FacesMessage("Login failed! ");
-	    
-            FacesContext.getCurrentInstance().addMessage(null, outMessage);
-	return "login";
+	    FacesContext.getCurrentInstance().addMessage(null, outMessage);
+	    return "login";
 	}
-	
+
     }
 
     /**
