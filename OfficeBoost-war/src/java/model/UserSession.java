@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package backing;
+package model;
 
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;

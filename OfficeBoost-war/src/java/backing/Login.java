@@ -4,12 +4,14 @@
  */
 package backing;
 
+import model.UserSession;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import model.UserSys;
 
 /**
  *
@@ -25,13 +27,11 @@ public class Login {
     private String password;
     @Inject @Named(value="userSession")
     UserSession userSession;
-    private final String uString = "abc";
-    private final String pString = "123";
 
     public String loginAction() {
 	FacesMessage outMessage = null;
 
-	if (username.equals(uString) && password.equals(pString)) {
+	if (UserSys.getInstance().checkLogin(username, password)) {
 //	    outMessage = new FacesMessage("Login success! ");
 	    userSession.login(username);
 	    return "success";
