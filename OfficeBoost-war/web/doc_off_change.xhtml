@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <title>OfficeBoost System---请假单</title>
+    </h:head>
+
+    <h:body>
+        <f:view>
+            <h:form>
+                <div id="container">
+                    <div id="header">
+                        <div class="bd">
+                        <div class="top-nav-info">
+                            
+                            <font size="3" color="blue">欢迎您：<h:outputText value="#{userSession.username}  " rendered="true"/></font>
+                            
+                            <a href="login.xhtml"><font color="red">退出</font></a>
+                        </div>
+                        </div>
+                       
+                    </div>
+                     <div id="menu">
+                        
+                     </div>
+                    <br class="clearfloat" />
+                    <div id="mainContent">
+                        <div id="sidebar">
+                            <ul class="nav">
+                                <li><a href="#">我的日程</a></li>
+                                <li><a href="myinfos.xhtml">个人信息</a></li>
+                                <li><a href="main.xhtml">通知提醒</a></li>
+                                <li><font size="2">公文管理</font></li>
+                                <li><a href="docmanage.xhtml">&nbsp;&nbsp;&nbsp;&nbsp;文件申请</a></li>
+                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;文件批复</a></li>
+                                <li><a href="equipment_manage.xhtml">设备管理</a></li>
+                                <li><a href="location_appointment.xhtml">场地预约</a></li>
+                            </ul>
+                            
+                        </div>
+                        <div id="content">                            
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            请假单
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>申请人：</td>
+					<td><input type="text" name="applicant" value="#{userSession.username}" readonly="readonly" disabled="true"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>请假理由：</td>
+                                            <td><h:inputText label="请假理由"
+                                                             id="reason"
+                                                             readonly="true"
+                                                             value="#!"
+                                                             required="true"/>
+                                               </td>
+                                        </tr>
+                                        <tr>
+                                             <td>班主任意见：</td>
+                                             <td><textarea name="" rows="8" cols="40" >
+                                                </textarea></td>
+                                        </tr>
+                                        <tr>
+                                             <td>学工办意见：</td>
+                                            <td><textarea name="" rows="8" cols="40" disabled="disabled">
+                                                </textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>教务办意见：</td>
+                                            <td><textarea name="" rows="8" cols="40" disabled="disabled">
+                                                </textarea></td>
+                                        </tr>
+                                            <td>学院意见：</td>
+                                            <td><textarea name="" rows="8" cols="#{20*2}" disabled="true">
+                                                </textarea></td>
+                                           
+                                    </tbody>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </f:view>
+    </h:body>
+
+</html>
