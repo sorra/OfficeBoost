@@ -16,10 +16,10 @@ import javax.enterprise.context.ApplicationScoped;
 @Named(value = "taskList")
 @ApplicationScoped
 public class TaskList {
-    private List<String> taskList = new ArrayList<>();
+    private List<Task> taskList = new ArrayList<>();
     
-    public List<String> list() {
-        return getTaskList();
+    public List<Task> list() {
+        return taskList;
     }
 
     /**
@@ -31,14 +31,14 @@ public class TaskList {
     /**
      * @return the taskList
      */
-    public List<String> getTaskList() {
+    public List<Task> getTaskList() {
         return taskList;
     }
 
     /**
      * @param taskList the taskList to set
      */
-    public void setTaskList(List<String> taskList) {
+    public void setTaskList(List<Task> taskList) {
         this.taskList = taskList;
     }
 }

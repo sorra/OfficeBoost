@@ -38,7 +38,9 @@
                                 <li><a href="main.xhtml">通知提醒</a></li>
                                 <li><font size="2">公文管理</font></li>
                                 <li><a href="docmanage.xhtml">&nbsp;&nbsp;&nbsp;&nbsp;文件申请</a></li>
-                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;文件批复</a></li>
+                                <li><a ><h:outputLink value="#{navigationBean.fileReplyTo()}">
+                                        <f:verbatim>&nbsp;&nbsp;&nbsp;&nbsp;文件批复</f:verbatim>
+                                         </h:outputLink></a></li>
                                 <li><a href="equipment_manage.xhtml">设备管理</a></li>
                                 <li><a href="location_appointment.xhtml">场地预约</a></li>
                             </ul>
@@ -59,7 +61,7 @@
                                         <tr>
                                             <td>请假理由：</td>
                                             <td><h:inputTextarea id="reason"
-                                                                 value=""
+                                                                 value="#"
                                                                  readonly="true"
                                                                  rows="8"
                                                                  cols="40"/>
