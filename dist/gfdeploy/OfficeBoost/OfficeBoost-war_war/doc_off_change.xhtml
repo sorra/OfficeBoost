@@ -54,7 +54,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <h:form></h:form>
                                         <tr>
                                         <td>申请人：</td>
 					<td><input type="text" name="applicant" value="#{userSession.username}" readonly="readonly" disabled="true"/></td>
@@ -62,15 +61,21 @@
                                         <tr>
                                             <td>请假理由：</td>
                                             <td><h:inputTextarea id="reason"
-                                                                 value="#{submitBean.toSubmit}"
+                                                                 value="#"
+                                                                 readonly="true"
                                                                  rows="8"
                                                                  cols="40"/>
+                                                
                                             </td>
                                         </tr>
                                         <tr>
                                              <td>班主任意见：</td>
-                                             <td><textarea name="" rows="8" cols="40" disabled="disabled">
-                                                </textarea></td>
+                                             <td>
+                                                 <h:inputTextarea id="banzhuren"
+                                                                  value=""
+                                                                  rows="8"
+                                                                  cols="40"/>
+                                             </td>
                                         </tr>
                                         <tr>
                                              <td>学工办意见：</td>
@@ -85,7 +90,7 @@
                                             <td>学院意见：</td>
                                             <td><textarea name="" rows="8" cols="#{20*2}" disabled="true">
                                                 </textarea></td>
-                                            <td><h:commandButton value="Login" action="#{submitBean.pageSubmit()}"/></td>
+                                           
                                     </tbody>
                                 </table>
                         </div>

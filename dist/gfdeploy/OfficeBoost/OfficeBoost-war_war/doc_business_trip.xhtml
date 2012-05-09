@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
         <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
-        <title>OfficeBoost System---请假单</title>
+        <title>OfficeBoost System首页</title>
     </h:head>
 
     <h:body>
@@ -47,45 +47,45 @@
                             
                         </div>
                         <div id="content">                            
-                                <table>
+                                  <table>
                                     <thead>
                                         <tr>
-                                            请假单
+                                            外地出差申请单
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <h:form></h:form>
                                         <tr>
-                                        <td>申请人：</td>
-					<td><input type="text" name="applicant" value="#{userSession.username}" readonly="readonly" disabled="true"/></td>
+                                            <td>申请人：</td>
+                                            <td><input type="text" name="applicant" value="#{userSession.username}" readonly="readonly" disabled="true"/></td>
                                         </tr>
                                         <tr>
-                                            <td>请假理由：</td>
-                                            <td><h:inputTextarea id="reason"
-                                                                 value="#{submitBean.toSubmit}"
-                                                                 rows="8"
-                                                                 cols="40"/>
-                                            </td>
+                                             <td>陪同人员：</td>
+                                             <td>
+                                                 <textarea name="" rows="8" cols="40" disabled="">
+                                                </textarea>
+                                             </td>
                                         </tr>
                                         <tr>
-                                             <td>班主任意见：</td>
-                                             <td><textarea name="" rows="8" cols="40" disabled="disabled">
+                                             <td>出差任务：</td>
+                                             <td><textarea name="" rows="8" cols="40" >
                                                 </textarea></td>
                                         </tr>
                                         <tr>
-                                             <td>学工办意见：</td>
-                                            <td><textarea name="" rows="8" cols="40" disabled="disabled">
+                                            <td>出差地点及具体单位：</td>
+                                            <td><textarea name="" rows="8" cols="40" disabled="">
                                                 </textarea></td>
                                         </tr>
                                         <tr>
-                                            <td>教务办意见：</td>
-                                            <td><textarea name="" rows="8" cols="40" disabled="disabled">
+                                            <td>院系审批意见：</td>
+                                            <td><textarea name="" rows="8" cols="40" disabled="true">
                                                 </textarea></td>
                                         </tr>
-                                            <td>学院意见：</td>
-                                            <td><textarea name="" rows="8" cols="#{20*2}" disabled="true">
+                                        
+                                        <tr>
+                                            <td>学校主管领导审批意见：</td>
+                                            <td><textarea name="" rows="8" cols="40" disabled="true">
                                                 </textarea></td>
-                                            <td><h:commandButton value="Login" action="#{submitBean.pageSubmit()}"/></td>
+                                        </tr>
                                     </tbody>
                                 </table>
                         </div>

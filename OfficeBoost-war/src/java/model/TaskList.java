@@ -21,6 +21,14 @@ public class TaskList {
     public List<Task> list() {
         return taskList;
     }
+    
+    public void add(String username, String toSubmit) {
+        Task task = new Task();
+        task.setId(taskList.size());
+        task.setUsername(username);
+        task.setContent(toSubmit);
+        taskList.add(task);
+    }
 
     /**
      * Creates a new instance of TaskList
