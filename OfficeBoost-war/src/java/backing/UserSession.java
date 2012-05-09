@@ -16,13 +16,33 @@ import javax.faces.bean.ManagedProperty;
 @Named(value = "userSession")
 @SessionScoped
 public class UserSession implements Serializable {
+    @ManagedProperty(value="false")
+    private boolean valid;
     @ManagedProperty(value="")
     private String username;
+    
+    public void login(String usernameString) {
+	valid = true;
+	username = usernameString;
+    }
+    
+    public void logout() {
+	valid = false;
+	username = "";
+    }
 
     /**
      * Creates a new instance of UserSession
      */
     public UserSession() {
+    }
+
+    public boolean isValid() {
+	return valid;
+    }
+
+    public void setValid(boolean valid) {
+	this.valid = valid;
     }
 
     public String getUsername() {

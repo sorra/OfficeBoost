@@ -28,17 +28,17 @@ public class Login {
     private final String uString = "abc";
     private final String pString = "123";
 
-    public String login() {
+    public String loginAction() {
 	FacesMessage outMessage = null;
 
 	if (username.equals(uString) && password.equals(pString)) {
 //	    outMessage = new FacesMessage("Login success! ");
-	    userSession.setUsername(username);
-	    return "main";
+	    userSession.login(username);
+	    return "success";
 	} else {
 	    outMessage = new FacesMessage("Login failed! ");
 	    FacesContext.getCurrentInstance().addMessage(null, outMessage);
-	    return "login";
+	    return "failure";
 	}
 
     }
