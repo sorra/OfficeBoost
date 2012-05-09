@@ -38,9 +38,13 @@
                                 <li><a href="#">通知提醒</a></li>
                                 <li><font size="2">公文管理</font></li>
                                 <li><a href="docmanage.xhtml">&nbsp;&nbsp;&nbsp;&nbsp;文件申请</a></li>
-                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;文件批复</a></li>
-                            </ul>
-                            
+                                <li><a href="">
+                                        <h:outputLink value="#{navigationBean.fileReplyTo()}">
+                                        <f:verbatim>&nbsp;&nbsp;&nbsp;&nbsp;文件批复</f:verbatim>
+                                         </h:outputLink></a></li>
+                                <li><a href="equipment_manage.xhtml">设备管理</a></li>
+                                <li><a href="location_appointment.xhtml">场地预约</a></li>
+                            </ul>                            
                         </div>
                         <div id="content">                            
                                 <li>#提醒消息1</li>
@@ -48,6 +52,7 @@
                                 <li>#提醒消息3</li>
                                 <li>#提醒消息4</li>
                                 <li>#提醒消息5</li>
+                                &nbsp;&nbsp;&nbsp;&nbsp;文件批复
                         </div>
                     </div>
                 </div>
