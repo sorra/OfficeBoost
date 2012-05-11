@@ -6,14 +6,14 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.inject.Named;
-import javax.enterprise.context.ApplicationScoped;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author 123
  */
-@Named(value = "taskList")
+@ManagedBean
 @ApplicationScoped
 public class TaskList {
     private List<Task> taskList = new ArrayList<>();

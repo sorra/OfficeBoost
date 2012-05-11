@@ -4,40 +4,34 @@
  */
 package backing;
 
-import model.UserSession;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.inject.Named;
+import model.CurrentUser;
 import model.UserSys;
 
 /**
  *
  * @author sorra
  */
-@Named(value = "loginBacking")
+@Named
 @RequestScoped
-public class Login {
+public class LoginBacking extends AbstractBacking {
 
     @ManagedProperty(value = "")
     private String username;
     @ManagedProperty(value = "")
     private String password;
-    @Inject
-    UserSession userSession;
 
     public String loginAction() {
-	FacesMessage outMessage = null;
 
 	if (UserSys.getInstance().checkLogin(username, password)) {
-//	    outMessage = new FacesMessage("Login success! ");
-	    userSession.login(username);
+//	    getFacesContext().addMessage(null, new FacesMessage("登录成功! "));
+	    getSessionMap().put("currentUser", new CurrentUser(username));
 	    return "success";
 	} else {
-	    outMessage = new FacesMessage("Login failed! ");
-	    FacesContext.getCurrentInstance().addMessage(null, outMessage);
+	    getFacesContext().addMessage(null, new FacesMessage("登录失败! "));
 	    return "failure";
 	}
 
@@ -46,7 +40,7 @@ public class Login {
     /**
      * Creates a new instance of Login
      */
-    public Login() {
+    public LoginBacking() {
     }
 
     public String getUsername() {

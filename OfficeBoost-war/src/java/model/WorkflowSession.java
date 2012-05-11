@@ -4,15 +4,15 @@
  */
 package model;
 
-import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 /**
  *
  * @author XJ
  */
-@Named(value = "workflowSession")
+@ManagedBean
 @SessionScoped
 public class WorkflowSession implements Serializable {
 

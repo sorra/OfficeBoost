@@ -5,10 +5,11 @@
 package backing;
 
 import java.util.Map;
-import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.context.Flash;
+import model.CurrentUser;
 
 /**
  *
@@ -26,6 +27,22 @@ public class AbstractBacking {
     
     @ManagedProperty(value="#{sessionScope}")
     private Map<String, Object> sessionMap;    
+    
+    public boolean isUserLoggedIn() {
+	return getSessionMap().containsKey("currentUser");
+    }
+    
+    public CurrentUser getCurrentUser() {
+	return (CurrentUser)getSessionMap().get("currentUser");
+    }
+    
+    public void setCurrentUser(CurrentUser currentUser) {
+	getSessionMap().remove("currentUser");
+	if (currentUser != null) {
+	    getSessionMap().put("currentUser", currentUser);
+	}
+    }
+    
     
     public Flash getFlash() {
 	return getFacesContext().getExternalContext().getFlash();

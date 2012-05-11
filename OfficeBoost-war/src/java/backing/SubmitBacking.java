@@ -4,22 +4,20 @@
  */
 package backing;
 
-import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import model.TaskList;
-import model.UserSession;
+import model.CurrentUser;
 
 /**
  *
  * @author 123
  */
-@Named(value = "submitBean")
-@RequestScoped
-public class SubmitBean {
+@ManagedBean
+public class SubmitBacking {
 
     /**
      * Creates a new instance of SubmitBean
@@ -29,7 +27,7 @@ public class SubmitBean {
     @ManagedProperty(value = "")
     private String toSubmit;
     @Inject
-    private UserSession userSession;
+    private CurrentUser userSession;
     @Inject
     private TaskList taskList;
 
@@ -50,7 +48,7 @@ public class SubmitBean {
         
     }
             
-    public SubmitBean() {
+    public SubmitBacking() {
     }
 
 }
