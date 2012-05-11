@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/includes/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="title">
+        OfficeBoost System--个人信息
+    </ui:define>
+    <ui:define name="header">
+        header
+    </ui:define>
+
+    <ui:define name="menu">
+        menu
+    </ui:define>
+
+    <ui:define name="sidebar">
+        <h:form>
+            <h:panelGrid columns="1">
+                <h:commandLink action="#" value="我的日程" shape="rect"></h:commandLink>
+                <h:commandLink action="#" value="个人信息"></h:commandLink>
+                <h:commandLink action="#" value="通知提醒"></h:commandLink>
+                <h:commandLink action="/office/doc_off2.xhtml" value="公文管理"></h:commandLink>
+                <h:commandLink action="#" value="设备管理"></h:commandLink>
+                <h:commandLink action="#" value="场地预约"></h:commandLink>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="姓名"/>
+                <h:outputText value="#{userSession.username}"/>
+                <h:outputText value="学号"/>
+                <h:outputText value=""/>
+                <h:outputText value="性别"/>
+                <h:selectOneRadio value="#">
+                    <f:selectItem itemLabel="男"/>
+                    <f:selectItem itemLabel="女"/>
+                </h:selectOneRadio>
+                <h:outputText value="年级"/>
+                <h:selectOneMenu id="grade" value="#">
+                    <f:selectItem itemLabel="2009"/>
+                    <f:selectItem itemLabel="2010"/>
+                    <f:selectItem itemLabel="2011"/>
+                    <f:selectItem itemLabel="2012"/>
+                    <f:selectItem itemLabel="2013"/>
+                </h:selectOneMenu>
+                <h:outputText value="联系电话"/>
+                <h:inputText value="#" size="10" />
+                <h:outputText value="备注"/>
+                <h:inputTextarea value="#" cols="11" rows="2"/>
+                <h:commandButton value="保存" action="#"/>
+            </h:panelGrid>
+        </h:form>
+
+    </ui:define>
+
+    <ui:define name="footer">
+        footer
+    </ui:define>
+
+</ui:composition>

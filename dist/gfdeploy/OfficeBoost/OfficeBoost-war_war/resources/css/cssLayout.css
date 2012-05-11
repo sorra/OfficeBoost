@@ -89,6 +89,7 @@
     padding:10px; 
     background:#cff; 
     margin-bottom:10px;
+    min-height: 500px;
 }
 #footer 
 { 
@@ -209,3 +210,21 @@ margin-right: auto;
 margin-bottom: 0px;
 margin-left: auto;
 }
+
+
+/*  <div id="top">
+            <ui:insert name="top">Top</ui:insert>
+        </div>
+        <div>
+            <div id="left">
+                <ui:insert name="left">Left</ui:insert>
+            </div>
+            <div id="content" class="left_content">
+                <ui:insert name="content">Content</ui:insert>
+            </div>
+        </div>
+        <div id="bottom">
+            <ui:insert name="bottom">Bottom</ui:insert>
+        </div>
+
+    </h:body>*/
