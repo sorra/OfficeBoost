@@ -20,15 +20,15 @@ and open the template in the editor.
             <table>
                 <tr>
                     <td><h:outputText value="User Name:" rendered="true"/></td>
-                    <td><h:inputText value="#{login_backing.username}" rendered="true"  required="true"/></td>
+                    <td><h:inputText value="#{loginBacking.username}" rendered="true"  required="true"/></td>
                 </tr>
                 <tr>
                     <td><h:outputText value="Password:" rendered="true"/></td>
-                    <td><h:inputSecret value="#{login_backing.password}" rendered="true" required="true"/></td>
+                    <td><h:inputSecret value="#{loginBacking.password}" rendered="true" required="true"/></td>
                 </tr>
                 <tr>
                     <td><h:commandButton value="Reset" type="reset"/></td>
-                    <td><h:commandButton value="Login" action="#{login_backing.loginAction}"/></td>
+                    <td><h:commandButton value="Login" action="#{loginBacking.loginAction}"/></td>
                 </tr>
             
             </table>

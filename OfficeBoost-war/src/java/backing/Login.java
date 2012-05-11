@@ -17,7 +17,7 @@ import model.UserSys;
  *
  * @author sorra
  */
-@Named(value = "login_backing")
+@Named(value = "loginBacking")
 @RequestScoped
 public class Login {
 
