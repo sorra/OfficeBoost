@@ -25,7 +25,7 @@ public class Login {
     private String username;
     @ManagedProperty(value = "")
     private String password;
-    @Inject @Named(value="userSession")
+    @Inject
     UserSession userSession;
 
     public String loginAction() {

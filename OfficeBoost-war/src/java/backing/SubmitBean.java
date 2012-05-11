@@ -28,9 +28,9 @@ public class SubmitBean {
     private String userName; 
     @ManagedProperty(value = "")
     private String toSubmit;
-    @Inject @Named(value="userSession")
+    @Inject
     private UserSession userSession;
-    @Inject @Named(value="taskList")
+    @Inject
     private TaskList taskList;
 
     public String getToSubmit() {
@@ -52,4 +52,5 @@ public class SubmitBean {
             
     public SubmitBean() {
     }
+
 }
