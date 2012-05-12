@@ -2,12 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package stub;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import model.Task;
 
 /**
  *
@@ -15,7 +16,7 @@ import javax.faces.bean.ManagedBean;
  */
 @ManagedBean
 @ApplicationScoped
-public class TaskList {
+public class TaskSys {
     private List<Task> taskList = new ArrayList<>();
     
     public List<Task> list() {
@@ -33,7 +34,7 @@ public class TaskList {
     /**
      * Creates a new instance of TaskList
      */
-    public TaskList() {
+    public TaskSys() {
     }
 
     /**
