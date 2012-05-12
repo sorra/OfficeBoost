@@ -4,16 +4,16 @@
  */
 package model;
 
-import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
 
 /**
  *
  * @author XJ
  */
-@Named(value = "infoBean")
+@ManagedBean
 @SessionScoped
 public class InfoBean implements Serializable {
 
