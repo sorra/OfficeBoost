@@ -3,6 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
+    
+    <f:event type="preRenderView" listener="#{navigator.authNav(home)}"/>
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -19,9 +21,10 @@
                         <div class="bd">
                         <div class="top-nav-info">
                             
-                            <font size="3" color="blue">欢迎您：<h:outputText value="#{currentUser.username}  " rendered="true"/></font>
-                            
-                            <a href="login.xhtml"><font color="red">退出</font></a>
+                            <font size="3" color="blue">
+				欢迎您：<h:outputText value="#{currentUser.username} " rendered="true"/>
+			    </font>
+                            <h:commandLink value="退出" action="#{logoutBacking.logoutAction()}"/>
                         </div>
                         </div>
                        

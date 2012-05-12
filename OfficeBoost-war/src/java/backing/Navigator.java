@@ -30,6 +30,8 @@ public class Navigator extends AbstractBacking {
 	    return outcome;
 	} else {
 	    getFacesContext().addMessage(null, new FacesMessage("没有权限! "));
+	    getFacesContext().getApplication().getNavigationHandler().
+		    handleNavigation(getFacesContext(), null, "authority_failure?faces-redirect=true");
 	    return "authority_failure";
 	}
     }
