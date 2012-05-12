@@ -9,7 +9,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
-import model.TaskList;
+import stub.TaskSys;
 import model.CurrentUser;
 
 /**
@@ -29,7 +29,7 @@ public class SubmitBacking {
     @Inject
     private CurrentUser userSession;
     @Inject
-    private TaskList taskList;
+    private TaskSys taskList;
 
     public String getToSubmit() {
         return toSubmit;

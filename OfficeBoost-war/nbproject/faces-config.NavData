@@ -2,10 +2,23 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
+        <Node id="office/temp_file_reply2.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="office/temp_file_reply3.xhtml" x="150" y="750" zoom="true"/>
         <Node id="equipment_manage.xhtml" x="150" y="300" zoom="true"/>
         <Node id="login.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="*" x="650" y="150" zoom="true"/>
         <Node id="location_appointment.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="office/doc_off2.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="office/doc_lecture.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="office/doc_off.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="myinfos2.xhtml" x="900" y="150" zoom="true"/>
         <Node id="myinfos.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="office/doc_business_trip.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="test.xhtml" x="437" y="148" zoom="true"/>
+        <Node id="office/docmanage.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="office/temp_file_reply1.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="office/doc_off_change.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="home.xhtml" x="400" y="300" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>
