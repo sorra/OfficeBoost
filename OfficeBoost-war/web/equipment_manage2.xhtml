@@ -5,7 +5,7 @@
                 xmlns:h="http://java.sun.com/jsf/html">
 
     <ui:define name="title">
-        title
+        设备管理--OfficeBoost System
     </ui:define>
 
     <ui:define name="header">
@@ -21,8 +21,10 @@
             <h:panelGrid columns="1">
                 <h:commandLink action="schedule2.xhtml" value="我的日程" shape="rect"></h:commandLink>
                 <h:commandLink action="myinfos2.xhtml" value="个人信息"></h:commandLink>
-                <h:commandLink action="home2.xhtml" value="通知提醒"></h:commandLink>
-                <h:commandLink action="doc_manage2.xhtml" value="公文管理"></h:commandLink>
+                <h:commandLink action="home.xhtml" value="通知提醒"></h:commandLink>
+                <h:outputText value="公文管理"/>
+                <h:commandLink action="doc_manage2.xhtml" value="&nbsp;&nbsp;&nbsp;&nbsp;公文申请"></h:commandLink>
+                <h:commandLink action="#" value="&nbsp;&nbsp;&nbsp;&nbsp;公文审批" />
                 <h:commandLink action="equipment_manage2.xhtml" value="设备管理"></h:commandLink>
                 <h:commandLink action="location_appointment2.xhtml" value="场地预约"></h:commandLink>
             </h:panelGrid>
@@ -30,7 +32,9 @@
     </ui:define>
 
     <ui:define name="content">
-        
+        <h:form>
+            #开发中...
+        </h:form>
     </ui:define>
 
     <ui:define name="footer">

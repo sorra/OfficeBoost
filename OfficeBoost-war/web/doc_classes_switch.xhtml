@@ -5,7 +5,7 @@
                 xmlns:h="http://java.sun.com/jsf/html">
 
     <ui:define name="title">
-        场地预约--BoostOffice System
+        教师调课申请表--OfficeBoost System
     </ui:define>
 
     <ui:define name="header">
@@ -33,8 +33,34 @@
 
     <ui:define name="content">
         <h:form>
-            <h:outputText value="#开发中..."/>
-        </h:form>    
+            <h:outputLabel value="教师调课申请表"/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="申请人"/>
+                <h:outputText value="#{loginBacking.username}"/>
+                <h:outputLabel value="学院"/>
+                <h:inputText value="#" />
+                <h:outputLabel value="教研室"/>
+                <h:inputText value="#" />
+                <h:outputLabel value="课号"/>
+                <h:inputText value="#" />
+                <h:outputLabel value="课程名称"/>
+                <h:inputText value="#" />
+                <h:outputLabel value="年级"/>
+                <h:inputText value="#" />
+                <h:outputLabel value="学生专业"/>
+                <h:inputText value="#" />
+                <h:outputLabel value="课程调整情况"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="课程调整原因"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="学生通知情况"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="系院审批意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true"/>
+                <h:outputLabel value="教务处审批意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true"/>
+            </h:panelGrid>
+        </h:form>
     </ui:define>
 
     <ui:define name="footer">

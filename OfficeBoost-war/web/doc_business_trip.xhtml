@@ -5,7 +5,7 @@
                 xmlns:h="http://java.sun.com/jsf/html">
 
     <ui:define name="title">
-        场地预约--BoostOffice System
+        外地出差申请单--OfficeBoost System
     </ui:define>
 
     <ui:define name="header">
@@ -33,8 +33,26 @@
 
     <ui:define name="content">
         <h:form>
-            <h:outputText value="#开发中..."/>
-        </h:form>    
+            <h:outputLabel value="外地出差申请单"/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="申请人"/>
+                <h:outputText value="#{loginBacking.username}"/>
+                <h:outputLabel value="出差人姓名、职务、人数"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="出差任务"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="注明何项经费开支"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="出差地点和具体单位"/>
+                <h:inputTextarea value="#" rows="4" cols="40"/>
+                <h:outputLabel value="预计出差天数"/>
+                <h:inputText value="#" size="45"/>
+                <h:outputLabel value="系院审批意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true"/>
+                <h:outputLabel value="学习审批意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true"/>
+            </h:panelGrid>
+        </h:form>
     </ui:define>
 
     <ui:define name="footer">
