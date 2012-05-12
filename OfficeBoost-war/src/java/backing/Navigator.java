@@ -20,6 +20,8 @@ public class Navigator extends AbstractBacking {
 	    return outcome;
 	} else {
 	    getFacesContext().addMessage(null, new FacesMessage("请登录! "));
+	    getFacesContext().getApplication().getNavigationHandler().
+		    handleNavigation(getFacesContext(), null, "auth_failure");
 	    return "auth_failure";
 	}
     }
@@ -31,7 +33,7 @@ public class Navigator extends AbstractBacking {
 	} else {
 	    getFacesContext().addMessage(null, new FacesMessage("没有权限! "));
 	    getFacesContext().getApplication().getNavigationHandler().
-		    handleNavigation(getFacesContext(), null, "authority_failure?faces-redirect=true");
+		    handleNavigation(getFacesContext(), null, "authority_failure");
 	    return "authority_failure";
 	}
     }

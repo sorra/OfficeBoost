@@ -1,0 +1,5 @@
+Web Pages using Beans: 
+
+in template: session.currentUser, logutBacking
+home: navigator
+login: loginBacking

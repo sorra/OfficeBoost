@@ -16,6 +16,6 @@ public class LogoutBacking extends AbstractBacking {
     public void logoutAction() {
 	getFacesContext().getExternalContext().invalidateSession();
 	getFacesContext().getApplication().getNavigationHandler().
-		handleNavigation(getFacesContext(), null, "login?faces-redirect=true");
+		handleNavigation(getFacesContext(), null, "login");
     }
 }
