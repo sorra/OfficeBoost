@@ -15,22 +15,22 @@ import model.Authorizer;
 @ManagedBean
 public class Navigator extends AbstractBacking {
 
-    public String authenticationNavigate(String outcome) {
+    public String authNav(String outcome) {
 	if (isUserLoggedIn()) {
 	    return outcome;
 	} else {
 	    getFacesContext().addMessage(null, new FacesMessage("请登录! "));
-	    return "authentication_failure";
+	    return "auth_failure";
 	}
     }
 
-    public String authorizationNavigate(String outcome, String groupName) {
+    public String authorityNav(String outcome, String groupName) {
 	Authorizer authorizer = new Authorizer();
 	if (authorizer.isInGroup(getCurrentUser(), groupName)) {
 	    return outcome;
 	} else {
 	    getFacesContext().addMessage(null, new FacesMessage("没有权限! "));
-	    return "authorization_failure";
+	    return "authority_failure";
 	}
     }
 }
