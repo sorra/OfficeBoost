@@ -4,10 +4,9 @@
  */
 package backing;
 
-import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.inject.Named;
 import model.CurrentUser;
 import model.UserSys;
 
@@ -15,8 +14,7 @@ import model.UserSys;
  *
  * @author sorra
  */
-@Named
-@RequestScoped
+@ManagedBean
 public class LoginBacking extends AbstractBacking {
 
     @ManagedProperty(value = "")
