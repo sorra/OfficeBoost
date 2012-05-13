@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
-                template="/WEB-INF/includes/template.xhtml"
-                xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:f="http://java.sun.com/jsf/core">
+                template="./WEB-INF/includes/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
+
     <ui:define name="title">
-       个人信息-- OfficeBoost System
+        外地出差申请单--OfficeBoost System
     </ui:define>
 
 
@@ -27,32 +27,26 @@
 
     <ui:define name="content">
         <h:form>
+            <h:outputLabel value="外地出差申请单"/>
             <h:panelGrid columns="2">
-                <h:outputText value="姓名"/>
-                <h:outputText value="#{currentUser.username}"/>
-                <h:outputText value="学号"/>
-                <h:outputText value=""/>
-                <h:outputText value="性别"/>
-                <h:selectOneRadio value="#">
-                    <f:selectItem itemLabel="男"/>
-                    <f:selectItem itemLabel="女"/>
-                </h:selectOneRadio>
-                <h:outputText value="年级"/>
-                <h:selectOneMenu id="grade" value="#">
-                    <f:selectItem itemLabel="2009"/>
-                    <f:selectItem itemLabel="2010"/>
-                    <f:selectItem itemLabel="2011"/>
-                    <f:selectItem itemLabel="2012"/>
-                    <f:selectItem itemLabel="2013"/>
-                </h:selectOneMenu>
-                <h:outputText value="联系电话"/>
-                <h:inputText value="#" size="10" />
-                <h:outputText value="备注"/>
-                <h:inputTextarea value="#" cols="11" rows="2"/>
-                <h:commandButton value="保存" action="#"/>
+                <h:outputLabel value="申请人"/>
+                <h:outputText value="#{loginBacking.username}"/>
+                <h:outputLabel value="出差人姓名、职务、人数"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="出差任务"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="注明何项经费开支"/>
+                <h:inputTextarea value="#" rows="8" cols="40"/>
+                <h:outputLabel value="出差地点和具体单位"/>
+                <h:inputTextarea value="#" rows="4" cols="40"/>
+                <h:outputLabel value="预计出差天数"/>
+                <h:inputText value="#" size="45"/>
+                <h:outputLabel value="系院审批意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true"/>
+                <h:outputLabel value="学习审批意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true"/>
             </h:panelGrid>
         </h:form>
-
     </ui:define>
 
 

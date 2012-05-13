@@ -14,7 +14,15 @@
     <h:body>
         <div id="container">
             <div id="header">
-                <ui:insert name="header"> </ui:insert>
+                <div class="top-nav-info">
+                    <ui:insert name="header"> 
+                        <h:form>
+                             <h:outputText value="欢迎您：#{currentUser.username}"/>
+                             <h:commandLink value="退出" action="./login.xhtml"  immediate="true" shape="rect" />
+                        </h:form>
+                    </ui:insert>
+                </div>
+                
             </div>
             <div id="menu">
                 <ui:insert name="menu"> </ui:insert>
@@ -32,7 +40,9 @@
             <div class="clearfloat">
             </div>
             <div id="footer">
-                <ui:insert name="footer"></ui:insert>
+                <ui:insert name="footer">
+                    <h:outputText escape="false" value="Copyright &amp;copy; 2012"/>
+                </ui:insert>
             </div>
         </div>
       

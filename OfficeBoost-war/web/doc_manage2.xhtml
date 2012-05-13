@@ -5,8 +5,9 @@
                 xmlns:h="http://java.sun.com/jsf/html">
 
     <ui:define name="title">
-       首页--OfficeBoost System
+        文件申请--OfficeBoost System
     </ui:define>
+
 
 
     <ui:define name="sidebar">
@@ -25,16 +26,16 @@
     </ui:define>
 
     <ui:define name="content">
-        #此部分为提醒信息列表
         <h:form>
-            <h:dataTable value="#" var="row">
-                <h:column>
-                    <h:outputLink value="#"/>
-                </h:column>
-            </h:dataTable>
+            <h:panelGrid columns="1">
+                <h:commandLink action="doc_off.xhtml" value="请假单"/>
+                <h:commandLink action="doc_lecture_apply.xhtml" value="邀请校外专家开设讲座/报告申请表"/>
+                <h:commandLink action="doc_business_trip.xhtml" value="外地出差申请单"/>
+                <h:commandLink action="doc_classes_switch.xhtml" value="教师调课申请表"/>
+                <h:commandLink action="doc_examination_review.xhtml" value="学生成绩复核申请表"/>
+            </h:panelGrid>
         </h:form>
     </ui:define>
-
 
 
 </ui:composition>
