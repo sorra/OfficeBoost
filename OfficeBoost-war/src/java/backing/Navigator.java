@@ -17,6 +17,7 @@ public class Navigator extends AbstractBacking {
 
     public String authNav(String outcome) {
 	if (isUserLoggedIn()) {
+//	    no use
 	    return outcome;
 	} else {
 	    getFacesContext().addMessage(null, new FacesMessage("请登录! "));
@@ -29,6 +30,7 @@ public class Navigator extends AbstractBacking {
     public String authorityNav(String outcome, String groupName) {
 	Authorizer authorizer = new Authorizer();
 	if (authorizer.isInGroup(getCurrentUser(), groupName)) {
+//	    no use
 	    return outcome;
 	} else {
 	    getFacesContext().addMessage(null, new FacesMessage("没有权限! "));
