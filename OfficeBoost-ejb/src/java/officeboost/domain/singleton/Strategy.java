@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain.singletion;
+package officeboost.domain.singleton;
 
 /**
  *
  * @author sorra
  */
-public class Group {
+public class Strategy {
     
 }
