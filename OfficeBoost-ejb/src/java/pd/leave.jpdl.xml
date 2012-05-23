@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="leave" name="leave" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="251,418,48,48" name="start1">
+      <transition to="apply"/>
+   </start>
+   <task assignee="applier" g="226,314,92,52" name="apply">
+      <transition to="teacher"/>
+   </task>
+   <task assignee="teacher" g="216,180,92,52" name="teacher">
+      <transition g="-57,-22" name="approve" to="student_office"/>
+      <transition g="-50,-22" name="end" to="end1"/>
+   </task>
+   <task assignee="studentoffice" g="373,58,129,52" name="student_office">
+      <transition g="-58,-23" name="approve" to="education_office"/>
+      <transition g="-50,-22" name="end" to="end1"/>
+   </task>
+   <end g="582,446,48,48" name="end1"/>
+   <task assignee="educationoffice" g="653,102,138,52" name="education_office">
+      <transition g="-45,-22" name="approve" to="school"/>
+      <transition g="-50,-22" name="end" to="end1"/>
+   </task>
+   <task assignee="school" g="828,303,92,52" name="school">
+      <transition g="-50,-22" name="finish" to="end1"/>
+   </task>
+    <end g="379,273,48,48" name="end1"/>
+</process>

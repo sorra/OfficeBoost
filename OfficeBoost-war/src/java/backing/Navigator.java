@@ -15,15 +15,11 @@ import model.Authorizer;
 @ManagedBean
 public class Navigator extends AbstractBacking {
 
-    public String authNav(String outcome) {
-	if (isUserLoggedIn()) {
-//	    no use
-	    return outcome;
-	} else {
+    public void authNav() {
+	if ( !isUserLoggedIn() ) {
 	    getFacesContext().addMessage(null, new FacesMessage("请登录! "));
 	    getFacesContext().getApplication().getNavigationHandler().
 		    handleNavigation(getFacesContext(), null, "auth_failure");
-	    return "auth_failure";
 	}
     }
 

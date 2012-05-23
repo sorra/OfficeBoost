@@ -17,7 +17,7 @@ import model.CurrentUser;
  * @author 123
  */
 @ManagedBean
-public class SubmitBacking {
+public class SubmitBacking extends AbstractBacking {
 
     /**
      * Creates a new instance of SubmitBean

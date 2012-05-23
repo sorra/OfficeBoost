@@ -17,17 +17,16 @@ import javax.persistence.Id;
 @Entity
 public class Group implements Serializable {
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     
     private String name;
     private String introduction;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public long getId() {
 	return id;
     }
-
     public void setId(long id) {
 	this.id = id;
     }
@@ -35,7 +34,6 @@ public class Group implements Serializable {
     public String getName() {
 	return name;
     }
-
     public void setName(String name) {
 	this.name = name;
     }
@@ -43,7 +41,6 @@ public class Group implements Serializable {
     public String getIntroduction() {
 	return introduction;
     }
-
     public void setIntroduction(String introduction) {
 	this.introduction = introduction;
     }
