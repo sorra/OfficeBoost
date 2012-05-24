@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./WEB-INF/includes/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="title">
+        同济大学学生成绩复核申请表--OfficeBoost System
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form>
+            <h:outputLabel value="学生成绩复核申请表"/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="申请人"/>
+                <h:outputText value="#{loginBacking.username}" id="name"/>
+                <h:outputLabel value="学号"/>
+                <h:outputText value="#"  id="ID"/>
+                <h:outputLabel value="专业"/>
+                <h:inputText value="#" id="major"/>
+                <h:outputLabel value="所在院系"/>
+                <h:inputText value="#" id="school"/>
+                <h:outputLabel value="现年级"/>
+                <h:inputText value="#" id="grade"/>
+                <h:outputLabel value="任课教师"/>
+                <h:inputText value="#" id="teacher"/>
+                <h:outputLabel value="复核课程考核时间"/>
+                <h:inputText value="#" id="test_time"/>
+                <h:outputLabel value="考场"/>
+                <h:inputText value="#" id="test_room"/>
+                <h:outputLabel value="复核课程考核性质"/>
+                <h:selectOneRadio value="#" id="kind_of_test">
+                    <f:selectItem itemLabel="正常"/>
+                    <f:selectItem itemLabel="重修"/>
+                    <f:selectItem itemLabel="重考"/>
+                </h:selectOneRadio>
+                <h:outputLabel value="原成绩"/>
+                <h:inputText value="#" id="original_mark"/>
+                <h:outputLabel value="申请理由"/>
+                <h:inputTextarea value="#" rows="8" cols="40" id="opinion"/>
+                <h:outputLabel value="学生所在院系教务科意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true" id="student_edu_office_opinion"/>
+                <h:outputLabel value="开课院系教务科意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true" id="class_edu_office_opinion"/>
+                <h:outputLabel value="开课院系意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true" id="class_school_opinion"/>
+                <h:outputLabel value="复核结果"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true" id="result"/>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+
+
+</ui:composition>

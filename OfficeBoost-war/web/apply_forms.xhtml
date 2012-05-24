@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./WEB-INF/includes/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:define name="title">
+        文件申请--OfficeBoost System
+    </ui:define>
+
+    <ui:define name="content">
+         <h:form>
+            <h:panelGrid columns="1">
+                <h:commandLink action="doc_off.xhtml" value="请假单"/>
+                <h:commandLink action="doc_lecture_apply.xhtml" value="邀请校外专家开设讲座/报告申请表"/>
+                <h:commandLink action="doc_business_trip.xhtml" value="外地出差申请单"/>
+                <h:commandLink action="doc_classes_switch.xhtml" value="教师调课申请表"/>
+                <h:commandLink action="doc_examination_review.xhtml" value="学生成绩复核申请表"/>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+
+
+</ui:composition>

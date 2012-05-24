@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./WEB-INF/includes/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:define name="title">
+        请假单--OfficeBoost System
+    </ui:define>
+
+ 
+
+
+
+    <ui:define name="content">
+         <h:form>
+            <h:outputLabel value="请假单"/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="申请人"/>
+                <h:outputText value="#{loginBacking.username}" id="name"/>
+                <h:outputLabel value="学号"/>
+                <h:outputText value="#" id="ID"/>
+                <h:outputText value="请假时间"/>
+                <h:inputTextarea value="#"  rows="8" cols="40" id="time_span"/>
+                <h:outputText value="请假理由"/>
+                <h:inputTextarea value="#"  rows="8" cols="40" id="reason"/>
+                <h:outputLabel value="班主任意见"/>
+                <h:inputTextarea value="#"  rows="8" cols="40" id="teacher_opinion"/>
+                <h:outputLabel value="学工办意见"/>
+                <h:inputTextarea value="#"  rows="8" cols="40" id="student_office_opinion"/>
+                <h:outputLabel value="教务办意见"/>
+                <h:inputTextarea value="#"  rows="8" cols="40" id="education_office_opinion"/>
+                <h:outputLabel value="学院意见"/>
+                <h:inputTextarea value="#"  rows="8" cols="40" id="school_opinion"/>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+
+
+</ui:composition>

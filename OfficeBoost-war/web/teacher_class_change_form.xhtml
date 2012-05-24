@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./WEB-INF/includes/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="title">
+        同济大学教师调课申请表--OfficeBoost System
+    </ui:define>
+
+
+    <ui:define name="content">
+         <h:form>
+            <h:outputLabel value="教师调课申请表"/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="申请人"/>
+                <h:outputText value="#{loginBacking.username}"/>
+                <h:outputLabel value="学院"/>
+                <h:inputText value="#" id="school"/>
+                <h:outputLabel value="教研室"/>
+                <h:inputText value="#" id="department" />
+                <h:outputLabel value="课号"/>
+                <h:inputText value="#" id="class_id"/>
+                <h:outputLabel value="课程名称"/>
+                <h:inputText value="#" id="class_name"/>
+                <h:outputLabel value="年级"/>
+                <h:inputText value="#" id="grade"/>
+                <h:outputLabel value="学生专业"/>
+                <h:inputText value="#" id="major"/>
+                <h:outputLabel value="课程调整情况"/>
+                <h:inputTextarea value="#" rows="8" cols="40" id="detial"/>
+                <h:outputLabel value="课程调整原因"/>
+                <h:inputTextarea value="#" rows="8" cols="40" id="reason"/>
+                <h:outputLabel value="学生通知情况"/>
+                <h:inputTextarea value="#" rows="8" cols="40" id="notice_detail"/>
+                <h:outputLabel value="系院审批意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true" id="school_opinion"/>
+                <h:outputLabel value="教务处审批意见"/>
+                <h:inputTextarea value="#" rows="8" cols="40" disabled="true" id="college_edu_office_opinion"/>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+
+</ui:composition>
