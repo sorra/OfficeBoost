@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="teacher_study" name="teacher_study" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="45,43,48,48" name="start1">
+      <transition name="to apply" to="apply" g="-53,-22"/>
+   </start>
+   <task g="130,134,92,52" name="leader" assignee="leader">
+      <transition g="-5,-22" name="reject_by_leader" to="end1"/>
+      <transition g="-125,-22" name="accept_by_leader" to="president"/>
+   </task>
+   <task g="126,268,92,52" name="president" assignee="president">
+      <transition g="-5,-22" name="accept_by_president" to="school"/>
+      <transition g="-5,-22" name="reject_by_president" to="end1"/>
+   </task>
+   <task g="384,276,92,52" name="school" assignee="school">
+      <transition to="end1"/>
+   </task>
+   <end g="402,128,48,48" name="end1"/>
+   <task name="apply" g="135,39,92,52" assignee="lingo">
+      <transition to="leader"/>
+   </task>
+</process>

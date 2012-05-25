@@ -4,7 +4,10 @@
  */
 package officeboost.domain;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.ejb.Singleton;
 import javax.ejb.LocalBean;
 import org.jbpm.api.Configuration;
@@ -20,11 +23,16 @@ import org.jbpm.api.task.Task;
 @LocalBean
 public class ProcessMgr {
     private ProcessEngine processEngine = null;
+    private List<Lock> lockList = new ArrayList<Lock>();
     
     @PostConstruct
     public void init() {	
 	Configuration configuration = new Configuration();
 	processEngine = configuration.buildProcessEngine();
+    }
+    @PreDestroy
+    public void shut() {
+	processEngine.close();
     }
     
     public String mes() {

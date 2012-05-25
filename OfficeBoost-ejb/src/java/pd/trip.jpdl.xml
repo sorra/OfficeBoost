@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="teacher_trip" name="teacher_trip" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="30,100,48,48" name="start1">
+      <transition to="apply"/>
+   </start>
+   <task g="164,99,92,52" name="apply" assignee="lingo">
+      <transition to="school"/>
+   </task>
+   <task g="163,187,92,52" name="school" assignee="school">
+      <transition g="-5,-22" name="accept_by_school" to="college"/>
+      <transition g="-5,-22" name="reject_by_school" to="end1"/>
+   </task>
+   <task g="162,271,92,52" name="college" assignee="college">
+      <transition to="end1"/>
+   </task>
+   <end g="379,273,48,48" name="end1"/>
+</process>

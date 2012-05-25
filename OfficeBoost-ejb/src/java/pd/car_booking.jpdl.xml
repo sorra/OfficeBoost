@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="carbooking" name="carbooking" xmlns="http://jbpm.org/4.4/jpdl">
+   <start name="start" g="275,43,48,48">
+      <transition to="apply"/>
+   </start>
+   <task name="apply" assignee="lingo" g="254,124,92,52">
+      <transition to="school"/>
+   </task>
+   <task name="school" assignee="school" g="257,209,92,52">
+      <transition to="end"/>
+   </task>
+   <end name="end" g="280,301,48,48"/>
+</process>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="change_class" name="change_class" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="32,50,48,48" name="start1">
+      <transition to="apply"/>
+   </start>
+   <task g="175,46,92,52" name="apply" assignee="lingo">
+      <transition to="school"/>
+   </task>
+   <task g="175,138,92,52" name="school" assignee="school">
+      <transition g="-5,-22" name="accept_by_school" to="collegs_edu_office"/>
+      <transition g="456,167:-5,-22" name="reject_by_school" to="end1"/>
+   </task>
+   <task g="128,235,187,52" name="collegs_edu_office" assignee="collegs_edu_office">
+      <transition to="end1"/>
+   </task>
+   <end g="433,240,48,48" name="end1"/>
+</process>

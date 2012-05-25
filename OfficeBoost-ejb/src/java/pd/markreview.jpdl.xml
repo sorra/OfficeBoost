@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="mark_review" name="mark_review" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="46,76,48,48" name="start1">
+      <transition to="apply"/>
+   </start>
+   <task g="192,72,92,52" name="apply" assignee="lingo">
+      <transition to="student_edu_office"/>
+   </task>
+   <task g="168,168,141,52" name="student_edu_office" assignee="student_edu_office">
+      <transition to="class_edu_office"/>
+   </task>
+   <task g="180,252,124,52" name="class_edu_office" assignee="class_edu_office">
+      <transition to="class_school_opinion"/>
+   </task>
+   <task g="384,72,145,52" name="class_school_opinion" assignee="class_school_opinion">
+      <transition to="result"/>
+   </task>
+   <end g="432,288,48,48" name="end1"/>
+   <task g="408,192,92,52" name="result" assignee="result">
+      <transition to="end1"/>
+   </task>
+</process>

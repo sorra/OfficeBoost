@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="lecture" name="lecture" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="275,43,48,48" name="start1">
+      <transition to="apply"/>
+   </start>
+   <task g="254,124,92,52" name="apply" assignee="lingo">
+      <transition to="school"/>
+   </task>
+   <task g="257,209,92,52" name="school" assignee="school">
+      <transition to="end1"/>
+   </task>
+   <end g="280,301,48,48" name="end1"/>
+</process>

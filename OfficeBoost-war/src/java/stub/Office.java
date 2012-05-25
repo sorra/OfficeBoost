@@ -16,7 +16,6 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean
 @ApplicationScoped
 public class Office {
-    private List<Lock> lockList = new ArrayList<>();
     
     public void submitTask() {	
     }
