@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 @LocalBean
-public class StrategyMgr {
+public class StrategyService {
     @PersistenceContext
     EntityManager em;
 

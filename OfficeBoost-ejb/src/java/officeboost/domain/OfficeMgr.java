@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.ejb.EJB;
+import javax.ejb.LocalBean;
+import javax.ejb.Singleton;
 import org.jbpm.api.task.Task;
 
 
@@ -16,6 +18,8 @@ import org.jbpm.api.task.Task;
  *
  * @author sorra
  */
+@Singleton
+@LocalBean
 public class OfficeMgr {
     @EJB
     ProcessMgr pm;
@@ -32,6 +36,6 @@ public class OfficeMgr {
 	return taskList;
     }
     
-    public void submitTask() {	
+    public void submit() {	
     }
 }

@@ -17,7 +17,7 @@ import officeboost.entity.Group;
  */
 @Stateless
 @LocalBean
-public class GroupMgr {
+public class GroupService {
     @PersistenceContext
     EntityManager em;
 
