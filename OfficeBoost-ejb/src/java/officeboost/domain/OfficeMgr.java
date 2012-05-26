@@ -1,0 +1,37 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package officeboost.domain;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.ejb.EJB;
+import org.jbpm.api.task.Task;
+
+
+/**
+ *
+ * @author sorra
+ */
+public class OfficeMgr {
+    @EJB
+    ProcessMgr pm;
+    
+    Map<String, Lock> lockMap = new HashMap<>();
+    
+    public List<Task> getTaskList(String assignee) {
+	List<Task> taskList = pm.getProcessEngine().getTaskService().findPersonalTasks(assignee);
+	for (int i = 0; i < taskList.size(); i++) {
+	    if ( lockMap.containsKey(taskList.get(i).getId()) ) {
+		taskList.remove(i);
+	    }
+	}
+	return taskList;
+    }
+    
+    public void submitTask() {	
+    }
+}

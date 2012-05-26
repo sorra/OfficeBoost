@@ -6,6 +6,10 @@ package officeboost.domain;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import officeboost.entity.User;
+import officeboost.entity.Group;
 
 /**
  *
@@ -14,9 +18,11 @@ import javax.ejb.Stateless;
 @Stateless
 @LocalBean
 public class GroupMgr {
+    @PersistenceContext
+    EntityManager em;
 
-    public void assign() {
-	
+    public void assign(User user, Group group) {
+	group.getUserList().add(user);
     }
     
 }

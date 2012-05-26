@@ -12,8 +12,8 @@
       <transition name="end" to="end1" g="-50,-22"/>
    </task>
    <task assignee="studentoffice" g="373,58,129,52" name="student_office">
-      <transition g="-58,-23" name="approve" to="education_office"/>
-      <transition g="-50,-22" name="end" to="end1"/>
+      <transition name="approve" to="education_office" g="-58,-23"/>
+      <transition name="end" to="end1" g="-50,-22"/>
    </task>
    <task assignee="educationoffice" g="653,102,138,52" name="education_office">
       <transition g="-45,-22" name="approve" to="school"/>

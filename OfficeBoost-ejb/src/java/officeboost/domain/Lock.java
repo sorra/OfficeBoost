@@ -9,13 +9,13 @@ package officeboost.domain;
  * @author sorra
  */
 public class Lock {
-    private int taskId;
+    private String taskId;
     
-    public Lock(int tid) {
+    public Lock(String tid) {
 	taskId = tid;
     }
     
-    public int getTaskId() {
+    public String getTaskId() {
 	return taskId;
     }
 }

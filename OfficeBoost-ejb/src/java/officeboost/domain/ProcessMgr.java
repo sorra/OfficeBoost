@@ -22,35 +22,39 @@ import org.jbpm.api.task.Task;
 @Singleton
 @LocalBean
 public class ProcessMgr {
-    private ProcessEngine processEngine = null;
-    private List<Lock> lockList = new ArrayList<Lock>();
+    private ProcessEngine pe = null;
+    private List<Lock> lockList = new ArrayList<>();
     
     @PostConstruct
     public void init() {	
 	Configuration configuration = new Configuration();
-	processEngine = configuration.buildProcessEngine();
+	pe = configuration.buildProcessEngine();
     }
     @PreDestroy
     public void shut() {
-	processEngine.close();
+	pe.close();
+    }
+    
+    public ProcessEngine getProcessEngine() {
+	return pe;
     }
     
     public String mes() {
 	String mes = null;
 	
-	processEngine.getRepositoryService().createDeployment().addResourceFromClasspath("pd/leave.jpdl.xml").deploy();
-	ProcessInstance processInstance = processEngine.getExecutionService().startProcessInstanceByKey("leave");
+	pe.getRepositoryService().createDeployment().addResourceFromClasspath("pd/leave.jpdl.xml").deploy();
+	ProcessInstance processInstance = pe.getExecutionService().startProcessInstanceByKey("leave");
 	
-	Task apply = processEngine.getTaskService().findPersonalTasks("applier").get(0);
-	processEngine.getTaskService().completeTask(apply.getId());
+	Task apply = pe.getTaskService().findPersonalTasks("applier").get(0);
+	pe.getTaskService().completeTask(apply.getId());
 	mes = "task apply: "+apply.getId()+"\n";
 	
-	Task task1 = processEngine.getTaskService().findPersonalTasks("teacher").get(0);
-	processEngine.getTaskService().completeTask(task1.getId(), "approve");
+	Task task1 = pe.getTaskService().findPersonalTasks("teacher").get(0);
+	pe.getTaskService().completeTask(task1.getId(), "approve");
 	mes += "task1: "+task1.getId()+"\n";
 	
-	Task task2 = processEngine.getTaskService().findPersonalTasks("studentoffice").get(0);
-	processEngine.getTaskService().completeTask(task2.getId(), "approve");
+	Task task2 = pe.getTaskService().findPersonalTasks("studentoffice").get(0);
+	pe.getTaskService().completeTask(task2.getId(), "approve");
 	mes += "task2: "+task2.getId()+"\n";
 	
 //	Task task3 = processEngine.getTaskService().findPersonalTasks("school").get(0);

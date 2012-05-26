@@ -6,6 +6,8 @@ package officeboost.domain;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
@@ -14,6 +16,8 @@ import javax.ejb.Stateless;
 @Stateless
 @LocalBean
 public class StrategyMgr {
+    @PersistenceContext
+    EntityManager em;
 
     public void assign() {
 	

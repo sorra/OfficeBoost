@@ -5,10 +5,12 @@
 package officeboost.entity;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -17,10 +19,11 @@ import javax.persistence.Id;
 @Entity
 public class Group implements Serializable {
     private static final long serialVersionUID = 1L;
-    private long id;
     
+    private long id;
     private String name;
     private String introduction;
+    private List<User> userList;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -43,6 +46,15 @@ public class Group implements Serializable {
     }
     public void setIntroduction(String introduction) {
 	this.introduction = introduction;
+    }
+    
+    @ManyToMany(mappedBy="user")
+    public List<User> getUserList() {
+	return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+	this.userList = userList;
     }
 
     @Override
