@@ -63,7 +63,7 @@ public class User implements Serializable {
 	this.introduction = introduction;
     }
 
-    @ManyToMany(mappedBy="group")
+    @ManyToMany(mappedBy="userList")
     public List<Group> getGroupList() {
 	return groupList;
     }

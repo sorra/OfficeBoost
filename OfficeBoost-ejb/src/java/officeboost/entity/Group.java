@@ -48,7 +48,7 @@ public class Group implements Serializable {
 	this.introduction = introduction;
     }
     
-    @ManyToMany(mappedBy="user")
+    @ManyToMany
     public List<User> getUserList() {
 	return userList;
     }

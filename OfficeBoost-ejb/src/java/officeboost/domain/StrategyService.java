@@ -16,7 +16,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 @LocalBean
 public class StrategyService {
-    @PersistenceContext
+//    @PersistenceContext
     EntityManager em;
 
     public void assign() {
