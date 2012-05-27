@@ -68,7 +68,7 @@
 }
 #header {
     height:30px;
-    background:#6cf;
+    background:#3870BE;
     margin-bottom:5px;
 }
 #menu {
@@ -78,23 +78,38 @@
 }
 #mainContent {}
 #sidebar { 
+    border: solid 1px #CEE1EE;
     float:left; 
-    width:200px; 
-    background:#93A5C4;
+    width:160px; 
+    font-size: 13px;
+    line-height: 30px;
+    background:#EDF3FF;
     margin-bottom:10px;
 }
+/*.nav {
+border: solid 1px #CEE1EE;
+background-color: #EDF3FF;
+float: left;
+width: 160px;
+font-size: 13px;
+margin-right: 10px;
+line-height: 32px;#cff
+}*/
 #content {
+    border:solid 1px #CEE1EE;
     float:right; 
     width:675px;
     padding:10px; 
-    background:#cff; 
+    background:white; 
     margin-bottom:10px;
     min-height: 500px;
 }
 #footer 
 { 
-    height:40px; 
-    background:#6cf;
+    padding: 5px 0 10px 0;
+    color: #999;
+    text-align: right;
+    border-top: solid 1px #BED2E2;
 }
 .clearfloat { 
     clear:both;
@@ -115,19 +130,23 @@ ul.nav {
 
 }
 ul.nav li {
-    border-bottom: 1px solid #666; /* this creates the button separation */
+    border-bottom: 1px solid #CFDDE8; /* this creates the button separation */
     font-weight: bold;
 }
+/*-------------*/
 ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
     padding: 5px 5px 5px 15px;
     display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
     text-decoration: none;
-    background: #8090AB;
-    color: #000;
+    background: #EDF3FF;/*#8090AB;*/
+    color: #39599b;
 }
 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
-    background: #6F7D94;
-    color: #FFF;
+/*    background: #6F7D94;
+    color: #FFF;*/    
+    text-decoration: none;
+    background-color:#00A4FF;
+    color:#39599b
 }
 
 ol.ol_nav{
@@ -200,6 +219,7 @@ ol.ol_nav a:hover, ol.ol_nav a:active, ol.ol_nav a:focus { /* this changes the b
 .top-nav-info {
 float: right;
 margin-top: 10px;
+text-decoration-color: white;
 }
 
 .top-nav .bd {
