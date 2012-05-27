@@ -10,13 +10,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 /**
  *
  * @author sorra
  */
-@Entity
+@Entity(name="obGroup")
 public class Group implements Serializable {
     private static final long serialVersionUID = 1L;
     
@@ -49,6 +51,9 @@ public class Group implements Serializable {
     }
     
     @ManyToMany
+    @JoinTable(name="Group_User", 
+	    joinColumns={@JoinColumn(name="group_id")}, 
+	    inverseJoinColumns={@JoinColumn(name="user_id")})
     public List<User> getUserList() {
 	return userList;
     }
