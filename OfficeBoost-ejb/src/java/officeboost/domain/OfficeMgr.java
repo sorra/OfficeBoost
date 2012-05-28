@@ -36,6 +36,13 @@ public class OfficeMgr {
 	return taskList;
     }
     
+    public int getTask(String taskId) {
+	//get formInstance by taskId
+	
+	//return formInstance
+	return 0;
+    }
+    
     public void submit(String taskId) {	
     }
 }

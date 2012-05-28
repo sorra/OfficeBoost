@@ -17,7 +17,7 @@ import officeboost.entity.Group;
 @Stateless
 @LocalBean
 public class StrategyService {
-    @PersistenceContext
+//    @PersistenceContext
     EntityManager em;
 
     public void assign(Group group, int strategyId) {

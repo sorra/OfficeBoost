@@ -5,7 +5,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
 
-    <f:event type="preRenderView" listener="#{navigator.authNav()}" />
+    <f:event type="preRenderView" listener="#{navigator.authNav}" />
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -21,7 +21,7 @@
                     <ui:insert name="header"> 
                         <h:form>
                             <h:outputText value="欢迎您：#{currentUser.username}"/>
-                            <h:commandLink value="退出" action="#{logoutBacking.logoutAction()}"  immediate="true" shape="rect" />
+                            <h:commandLink value="退出" action="#{logoutBacking.logoutAction}"  immediate="true" shape="rect" />
                         </h:form>
                     </ui:insert>
                 </div>

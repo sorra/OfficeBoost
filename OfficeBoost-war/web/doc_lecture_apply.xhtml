@@ -18,7 +18,7 @@
             <h:outputLabel value="邀请校外专家开设讲座/报告申请表"/>
             <h:panelGrid columns="2">
                 <h:outputLabel value="申请人"/>
-                <h:outputText value="#{loginBacking.username}"/>
+                <h:outputText value="#{currentUser.username}"/>
                 <h:outputLabel value="讲座/报告性质"/>
                 <h:selectOneRadio value="#">
                     <f:selectItem itemLabel="前沿技术讲座" itemValue="#"/>
