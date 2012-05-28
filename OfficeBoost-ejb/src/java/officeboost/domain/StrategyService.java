@@ -8,6 +8,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import officeboost.entity.Group;
 
 /**
  *
@@ -16,11 +17,11 @@ import javax.persistence.PersistenceContext;
 @Stateless
 @LocalBean
 public class StrategyService {
-//    @PersistenceContext
+    @PersistenceContext
     EntityManager em;
 
-    public void assign() {
-	
+    public void assign(Group group, int strategyId) {
+	;
     }
     
 }

@@ -51,7 +51,7 @@ public class Group implements Serializable {
     }
     
     @ManyToMany
-    @JoinTable(name="Group_User", 
+    @JoinTable(name="obGroup_obUser", 
 	    joinColumns={@JoinColumn(name="group_id")}, 
 	    inverseJoinColumns={@JoinColumn(name="user_id")})
     public List<User> getUserList() {

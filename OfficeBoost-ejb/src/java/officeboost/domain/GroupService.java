@@ -18,7 +18,7 @@ import officeboost.entity.Group;
 @Stateless
 @LocalBean
 public class GroupService {
-//    @PersistenceContext
+    @PersistenceContext
     EntityManager em;
 
     public void assign(User user, Group group) {
